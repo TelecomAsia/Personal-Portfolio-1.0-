@@ -18,4 +18,34 @@ API Rest com CRUD das operações no padrão HTTP. A aplicação **"CineIndie AP
 ```
 $ git clone https://github.com/mirnatetzner/CineIndie-API.git
 ```
-4. Finalmente, digite o comando cd e o nome do projeto para entrar no diretório do repositório clon
+4. Finalmente, digite o comando cd e o nome do projeto para entrar no diretório do repositório clonado.
+```
+ $ cd CineIndie-API
+```
+----------------
+### Dependências
+
+Além disso, para o funcionamento correto da aplicação, é preciso instalar as dependências utilizadas. Estas foram: 
+
+* **Express**
+* **SQLite3**
+* **Dotenv**
+* **Pragma**
+* **Path**
+* **Url**
+* **cors**
+
+Para isso, você pode utilizar o comando simplificado:
+
+```
+npm i
+```
+
+Ou caso prefira, você pode instalá-las uma a uma utilizando, separadamente, o comando abaixo:
+
+```
+   npm i express
+   npm i sqlite3
+   npm i dotenv
+   npm i path
+   npm i 
