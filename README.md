@@ -66,4 +66,23 @@ Pensando nas necessidades de um cinema real, nosso projeto se constitui em quatr
 url/combos
 url/filmes
 url/ingresso
-url/sa
+url/sala
+
+```
+
+## 1. Exemplos para requisição do verbo GET
+
+Para acessar as rotas do projeto, basta utilizar um dos comandos abaixo referente a entidade que deseja ler.
+
+```
+url/combos
+url/filmes
+url/ingresso
+url/sala
+
+```
+## 2. Exemplos para requisição do verbo POST
+O POST poderá ser utilizado para adicionar um novo objeto a entidade desejada. A requisição deve conter um objeto no formato JSON com todos os atributos presentes no modelo de cada entidade. Por exemplo, para o caso de adição de um novo filme:
+
+
+POST: u
