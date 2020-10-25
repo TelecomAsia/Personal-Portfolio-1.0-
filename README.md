@@ -85,4 +85,36 @@ url/sala
 O POST poderá ser utilizado para adicionar um novo objeto a entidade desejada. A requisição deve conter um objeto no formato JSON com todos os atributos presentes no modelo de cada entidade. Por exemplo, para o caso de adição de um novo filme:
 
 
-POST: u
+POST: url/filmes
+
+
+```
+  {
+    "nome": "De Volta para o Futuro",
+    "genero": "Ficção científica",
+    "duracao": "2hrs",
+    "anoLancamento": 1985,
+    "diretor": "Robert Zemeckis",
+    "sinopse": "Viajando no tempo em um carro modificado"
+  }
+
+```
+
+_E a resposta deverá ser:_
+
+```
+  {
+    "error": false,
+    "message": "Cadastrado com sucesso!"
+  }
+```
+
+_E isso significa que o novo filme foi cadastrado no banco de dados._
+
+POST: url/combos
+
+```
+{
+    name: "MEGA",
+    price: 30.00,
+    item1
