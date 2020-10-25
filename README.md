@@ -48,4 +48,22 @@ Ou caso prefira, você pode instalá-las uma a uma utilizando, separadamente, o 
    npm i sqlite3
    npm i dotenv
    npm i path
-   npm i 
+   npm i url
+   npm i pragma
+   npm i cors
+```
+-----------------
+# Rotas e entidades 🔀
+
+Pensando nas necessidades de um cinema real, nosso projeto se constitui em quatro entidades, sendo elas: Filmes, Ingressos, Salas e Combos. Abaixo trazemos alguns exemplos de como as  requisições e respostas podem ser realizadas em nossa aplicação, para Criar, Ler, Atualizar e Deletar objetos.
+
+----------------
+## Implementação dos verbos do HTTP
+
+## Rotas do projeto
+
+```
+url/combos
+url/filmes
+url/ingresso
+url/sa
