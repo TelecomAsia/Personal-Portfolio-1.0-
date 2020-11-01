@@ -151,4 +151,20 @@ POST: url/sala
 ```
 
 
-## 3. 
+## 3. Exemplos para requisição do verbo PUT
+
+Para a operação PUT deve ser passado o parâmetro _id_, da unidade que se almeja atualizar, após a url da requisição. Assim como na requisição POST, a requisição deve conter um objeto no formato JSON com todos os atributos presentes no modelo de cada entidade. Como a seguir:  
+
+```
+PUT: url/filmes/id
+{
+        "nome": "Teste",
+		"genero": "Teste",
+		"duracao": "Teste",
+		"anoLancamento": "Teste",
+		"diretor": "Teste",
+		"sinopse": "Teste"
+	}
+
+```
+PUT: url
