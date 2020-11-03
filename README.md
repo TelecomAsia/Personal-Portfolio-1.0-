@@ -167,4 +167,33 @@ PUT: url/filmes/id
 	}
 
 ```
-PUT: url
+PUT: url/combos/id
+```
+{
+    name: "MEGA",
+    price: 30.00,
+    item1: "Pipoca Mega", 
+    item2: "Coca-Cola 400ml", 
+    item3: "Mentos"
+}
+```
+
+PUT: url/ingresso/id
+```
+{
+    filme: 'Nome do filme', 
+    sala: 1, 
+    cadeira: 250, 
+    dataHora: '12/06/2022 20:00', 
+    precoIngresso: 40.00
+}
+```
+PUT: url/sala/id
+
+```
+{
+    "cadeiras_comuns": INTEGER,
+    "cadeiras_namoradeiras": INTEGER,
+    "espaço_cadeirantes": INTEGER,
+    "certificado_de_vistoria_anual": true || false,
+    "categoria_da_sala": "IMAX" || "XD" || "Macro 
