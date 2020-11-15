@@ -196,4 +196,30 @@ PUT: url/sala/id
     "cadeiras_namoradeiras": INTEGER,
     "espaço_cadeirantes": INTEGER,
     "certificado_de_vistoria_anual": true || false,
-    "categoria_da_sala": "IMAX" || "XD" || "Macro 
+    "categoria_da_sala": "IMAX" || "XD" || "Macro XE" || "XPlus" || "RealD" || "D-Box"
+
+}
+```
+## 4. Exemplos para requisição do verbo DELETE
+
+Para a operação DELETE deve ser passado o parâmetro _id_, da unidade que se almeja deletar, após a url da requisição. Como a seguir:  
+```
+DELETE: url/combos/id
+
+DELETE: url/filmes/id
+
+DELETE: url/ingresso/id
+
+DELETE: url/sala/id
+
+```
+
+
+
+## Contribuidores 👩‍💻👨‍💻
+
+  <table>
+    <tr align='center'>    
+      <td align="center">
+          <a href="https://github.com/mirnatetzner">
+            <img src='https://
