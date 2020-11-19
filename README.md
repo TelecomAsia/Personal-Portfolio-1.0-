@@ -222,4 +222,15 @@ DELETE: url/sala/id
     <tr align='center'>    
       <td align="center">
           <a href="https://github.com/mirnatetzner">
-            <img src='https://
+            <img src='https://avatars.githubusercontent.com/u/85193127?v=4' width="170px;" alt="Foto de perfil do Github"/><br>
+            <sub>
+              <b>Mirna Tetzner</b>
+            </sub>
+          </a>
+        </td>
+      <td align="center">
+          <td align="center">
+          <a href="https://github.com/alicebranq">
+            <img src='https://avatars.githubusercontent.com/u/102565368?v=4' width="170px;" alt="Foto de perfil do Github"/><br>
+            <sub>
+              <b>Alice B
