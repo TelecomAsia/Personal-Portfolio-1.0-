@@ -233,4 +233,18 @@ DELETE: url/sala/id
           <a href="https://github.com/alicebranq">
             <img src='https://avatars.githubusercontent.com/u/102565368?v=4' width="170px;" alt="Foto de perfil do Github"/><br>
             <sub>
-              <b>Alice B
+              <b>Alice Branquinho</b>
+            </sub>
+          </a>
+        </td>
+      <td align="center">
+          <a href="https://github.com/systemilc">
+            <img src='https://avatars.githubusercontent.com/u/34551203?v=4' width="170px;" alt="Foto de perfil do Github"/><br>
+            <sub>
+              <b>Isaac Costa</b>
+            </sub>
+          </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/joaofmds">
+          <img src='https://avatars.githubusercontent.com/u/95502785?v=4' width="170px;" alt="Foto de perfil do Github"
