@@ -247,4 +247,14 @@ DELETE: url/sala/id
       </td>
       <td align="center">
         <a href="https://github.com/joaofmds">
-          <img src='https://avatars.githubusercontent.com/u/95502785?v=4' width="170px;" alt="Foto de perfil do Github"
+          <img src='https://avatars.githubusercontent.com/u/95502785?v=4' width="170px;" alt="Foto de perfil do Github"/><br>
+            <sub>
+              <b>João Souza</b>
+            </sub>
+          </a>
+      </td>
+    </tr>
+   </table>
+   
+  ## Deploy da aplicação na Heroku:
+ https://cine-indie-api-resilia.herokuapp.com/{entidade}
