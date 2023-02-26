@@ -1,0 +1,28 @@
+
+{
+  "name": "api-cinema-da-resilia",
+  "version": "1.0.0",
+  "description": "API Rest com CRUD das operações no padrão HTTP que faz requisições ao \"Cinema da Resilia\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirnatetzner/API-Cinema-da-Resilia.git"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "api-cinema",
+    "http",
+    "crud"
+  ],
+  "author": "Alice, Issac, Joao Souza e Mirna",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mirnatetzner/API-Cinema-da-Resilia/issues"
+  },
+  "homepage": "https://github.com/mirnatetzner/API-Cinema-da-Resilia#readme",
+  "type": "module",
