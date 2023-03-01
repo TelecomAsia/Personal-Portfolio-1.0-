@@ -16,3 +16,19 @@ class CombosMetodos extends DAO {
         const response = await this.createTable(query)
         return response;
     }
+    
+    static async listarCombos(){
+        const query = ` SELECT * FROM combos`
+        const response = await this.listarTodos(query)
+        return response
+    } 
+
+    static async listarCombosId(id){
+        const query = ` SELECT * FROM combos WHERE id = ?`
+        const response = await this.listarPorId(id, query)
+        return response
+    }
+
+    static async listarCombosNome(name){
+        const query = ` SELECT * FROM combos WHERE name = ?`
+        const response = await this.listarPorId(name, 
