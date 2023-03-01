@@ -26,3 +26,14 @@
   },
   "homepage": "https://github.com/mirnatetzner/API-Cinema-da-Resilia#readme",
   "type": "module",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "jest": "^28.1.3",
+    "path": "^0.12.7",
+    "pragma": "^1.0.0",
+    "sqlite3": "^5.0.11",
+    "url": "^0.11.0"
+  }
+}
