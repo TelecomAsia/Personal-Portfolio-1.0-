@@ -31,4 +31,20 @@ class CombosMetodos extends DAO {
 
     static async listarCombosNome(name){
         const query = ` SELECT * FROM combos WHERE name = ?`
-        const response = await this.listarPorId(name, 
+        const response = await this.listarPorId(name, query)
+        return response
+    }
+
+    static async inserirCombos(combos) {
+        const query = `INSERT INTO combos (name, price, item1, item2, item3) VALUES (?, ?, ?, ?, ?)`
+        const response = await this.inserir(combos, query)
+        return response
+    }
+    
+    static async attCombosPorId(id, sala){
+        const query = `
+            UPDATE combos
+            SET (name, price, item1, item2, item3) = (?,?,?,?,?) 
+            WHERE id = ?`
+        const response = await this.atualizarPorId(sala, id, query)
+        return respon
