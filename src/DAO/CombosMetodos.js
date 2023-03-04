@@ -47,4 +47,16 @@ class CombosMetodos extends DAO {
             SET (name, price, item1, item2, item3) = (?,?,?,?,?) 
             WHERE id = ?`
         const response = await this.atualizarPorId(sala, id, query)
-        return respon
+        return response;
+    }
+
+    static async deletarCombosPorId(id){
+        const query = `
+            DELETE FROM combos WHERE id = ?`
+        const response = await this.deletarPorId(query, id)
+        return response;
+    }
+}
+
+export default CombosMetodos
+
