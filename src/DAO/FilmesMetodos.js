@@ -19,4 +19,22 @@ class FilmesMetodos extends DAO{
     }
 
     static async inserirFilme(filme) {
-        const query = `INSERT INTO filmes (nome, genero, dura
+        const query = `INSERT INTO filmes (nome, genero, duracao, anoLancamento, diretor, sinopse, image) VALUES (?, ?, ?, ?, ?, ?, ?)`
+        const response = await this.inserir(filme, query)
+        return response
+    }
+
+    static async listarTodosFilmes(){
+        const query = ` SELECT * FROM filmes`
+        const response = await this.listarTodos(query)
+        return response
+    }
+
+
+    static async listarFilmePorId(id){
+        const query = ` SELECT * FROM filmes WHERE id = ?`
+        const response = await this.listarPorId(id, query)
+        return response
+    }
+    
+  
