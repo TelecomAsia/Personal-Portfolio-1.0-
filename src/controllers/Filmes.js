@@ -25,4 +25,14 @@ class Filmes{
         })
 
         app.post("/filmes", async (req, res) => {
-    
+           const isValid = ValidacoesFilmes.isValid(...Object.values(req.body))
+            try {
+                if(isValid){
+                const filme = new FilmesModels(...Object.values(req.body))
+                const response = await  FilmesMetodos.inserirFilme(filme)
+                res.status(201).json(response)
+            }else{
+                throw new Error("Erro na requisição. Por gentileza, verifique se todas as informações estão preenchidas")
+            } 
+            } catch (error) {
+                res.status(400).json(e
