@@ -48,4 +48,17 @@ class Filmes{
                 const response = await FilmesMetodos.atualizaFilmePorId(req.params.id, filme)
                 res.status(200).json(response)
             } else {
-                res.status
+                res.status(400).json({Erro:"Erro, verifique se inseriu as informações corretas de acordo com a documentação."})
+            }
+        })
+
+
+        app.delete("/filmes/:id", async (req, res) => {
+            try {                
+                const filme = await FilmesMetodos.deletaFilmePorId(req.params.id)
+                if(!filme){
+                    throw new Error("Filme não encontrado")
+                }
+                res.status(200).json(filme)
+            } catch (error) {    
+                res
