@@ -61,4 +61,11 @@ class Filmes{
                 }
                 res.status(200).json(filme)
             } catch (error) {    
-                res
+                res.status(404).json({Error: error.message})
+            }
+                        
+        })
+    }
+   }
+
+export default Filmes
