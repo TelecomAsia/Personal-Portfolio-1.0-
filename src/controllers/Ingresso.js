@@ -48,4 +48,12 @@ class Ingresso {
 
             try{
                 if(isValid) {
-              
+                const ingresso = new IngressoModel(...Object.values(req.body))
+                const response = await IngressoMetodos.atualizarIngressoPorId(req.params.id, ingresso)
+                res.status(201).json(response)
+                }
+                else{
+                    res.status(400).json({Erro: "Seu ingresso deve ser enviado como objeto JSON com a tipagem correta dos atributos."})
+                }
+            } catch(error) {
+                res.status(400).json({error
