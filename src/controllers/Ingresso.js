@@ -34,4 +34,18 @@ class Ingresso {
                     const ingresso = new IngressoModel(...Object.values(req.body))
                     const response = await IngressoMetodos.inserirIngresso(ingresso)
                     console.log(response)
-           
+                    res.status(201).json(response)
+                } else {
+                     throw new Error("Não foi possível incluir o ingresso em nosso sistema.")
+                 }
+            } catch (error) {
+                res.status(400).json(error.message)
+            }
+        })
+
+        app.put('/ingresso/:id', async (req, res) => {
+           const isValid = ValidacoesIngresso.isValid(...Object.values(req.body))
+
+            try{
+                if(isValid) {
+              
