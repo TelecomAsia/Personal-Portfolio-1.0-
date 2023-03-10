@@ -56,4 +56,16 @@ class Ingresso {
                     res.status(400).json({Erro: "Seu ingresso deve ser enviado como objeto JSON com a tipagem correta dos atributos."})
                 }
             } catch(error) {
-                res.status(400).json({error
+                res.status(400).json({error: 'Não foi possível realizar a atualização do ingresso em nosso sistema.'})
+            }
+        })
+
+        app.delete('/ingresso/:id', async(req, res) => {
+            try {
+                const ingresso = await IngressoMetodos.deletarIngressoPorId(req.params.id)
+                if(!ingresso) {
+                    throw new Error("Ingresso não encontrado em nosso sistema.")
+                }
+                res.status(200).json(ingresso)
+            } catch(error) {
+                res.status(400).json({Error: erro
