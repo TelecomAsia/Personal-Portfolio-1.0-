@@ -68,4 +68,10 @@ class Ingresso {
                 }
                 res.status(200).json(ingresso)
             } catch(error) {
-                res.status(400).json({Error: erro
+                res.status(400).json({Error: error.message})
+            }
+        })
+    }
+}
+
+export default Ingresso
