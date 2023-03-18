@@ -25,4 +25,12 @@ class Salas {
         })
 
         app.post("/sala", async (req, res) => {
-            const isValid = ValidacoesSala.isValid(...Object.values(req.bod
+            const isValid = ValidacoesSala.isValid(...Object.values(req.body))
+            try {
+                if (!isValid) {
+                    throw new Error({
+                        Erro: "Erro, sua sala deve ser enviada como objeto JSON com os atirbutos: cadeiras_comuns, cadeiras_namoradeiras, espaços_cadeirantes, certificado_de_vistoria_anual, categoria_da_sala"
+                    })
+                } else {
+                    const Sala = new SalaModel(...Object.values(req.body))
+                    const response = await DatabaseSalaMetodos.inserirSala(
