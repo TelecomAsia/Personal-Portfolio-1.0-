@@ -46,4 +46,10 @@ class Salas {
         app.put("/sala/:id", async (req, res) => {
             const isValid = ValidacoesSala.isValid(...Object.values(req.body))
             try {
-                if (isVa
+                if (isValid) {
+                    const sala = new SalaModel(...Object.values(req.body))
+                    const response = await DatabaseSalaMetodos.atualizaSalaPorId(req.params.id, sala)
+                    res.status(200).json(response)
+                } else {
+                    res.status(400).json({
+                        Erro: "Sua sala deve ser enviada como objeto JSON com os atirbutos: cadeiras_comuns, cadeiras_namoradeiras, espaços_cadeirantes, certificado_de_vistoria_anual -TRUE ou FALSE-, categoria_d
