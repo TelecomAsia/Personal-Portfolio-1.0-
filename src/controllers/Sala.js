@@ -33,4 +33,17 @@ class Salas {
                     })
                 } else {
                     const Sala = new SalaModel(...Object.values(req.body))
-                    const response = await DatabaseSalaMetodos.inserirSala(
+                    const response = await DatabaseSalaMetodos.inserirSala(Sala)
+                    res.status(201).json(response)
+                }
+            } catch (error) {
+                res.status(400).json({
+                    Error: "revise os campos de sua requisição, confira se os dados estão de acordo com a tipagem e se o endereço está escrito corretamente"
+                })
+            }
+        })
+
+        app.put("/sala/:id", async (req, res) => {
+            const isValid = ValidacoesSala.isValid(...Object.values(req.body))
+            try {
+                if (isVa
