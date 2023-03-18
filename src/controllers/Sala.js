@@ -52,4 +52,17 @@ class Salas {
                     res.status(200).json(response)
                 } else {
                     res.status(400).json({
-                        Erro: "Sua sala deve ser enviada como objeto JSON com os atirbutos: cadeiras_comuns, cadeiras_namoradeiras, espaços_cadeirantes, certificado_de_vistoria_anual -TRUE ou FALSE-, categoria_d
+                        Erro: "Sua sala deve ser enviada como objeto JSON com os atirbutos: cadeiras_comuns, cadeiras_namoradeiras, espaços_cadeirantes, certificado_de_vistoria_anual -TRUE ou FALSE-, categoria_da_sala"
+                    })
+                }
+            } catch (error) {
+                res.status(404).json({
+                    Error: "revise os campos de sua requisição, confira se os dados estão de acordo com a tipagem e se o endereço está escrito corretamente, com parâmetro ID"
+                })
+            }
+        })
+
+        app.delete("/sala/:id", async (req, res) => {
+            try {
+                const salas = await DatabaseSalaMetodos.deletaSalaPorId(req.params.id)
+            
