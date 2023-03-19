@@ -65,4 +65,19 @@ class Salas {
         app.delete("/sala/:id", async (req, res) => {
             try {
                 const salas = await DatabaseSalaMetodos.deletaSalaPorId(req.params.id)
-            
+                if (!salas) {
+                    throw new Error("Sala não encontrada")
+                }
+                res.status(200).json(salas)
+            } catch (error) {
+                res.status(404).json({
+                    Error: error.message
+                })
+            }
+        })
+    }
+}
+
+
+
+export default Salas;
