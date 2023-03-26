@@ -42,3 +42,23 @@ class ValidacoesSala extends ValidacoesService {
                 return false
         }
     }
+    /**
+     * 
+     * @param {number} cComum 
+     * @param {number} cNamo 
+     * @param {number} cAcess 
+     * @param {boolean} certificado 
+     * @param {string} tipo 
+     * @returns boolean
+     */
+     static isValid(cComum, cNamo, cAcess, certificado, tipo) {
+        return this.validaCadeira(cComum) &&
+        this.validaCadeira(cNamo) &&
+        this.validaCadeira(cAcess) &&
+        this.validaCertificadoDeVistoriaAnual(certificado) &&
+        this.validaCategoriaDaSala(tipo);
+    }
+
+}
+
+export default ValidacoesSala
