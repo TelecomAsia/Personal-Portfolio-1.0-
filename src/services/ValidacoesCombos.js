@@ -49,4 +49,6 @@ export default class ValidacoesCombos {
     static validaCombos(name, price, item1, item2, item3){
         return this.validaName(name)
             && this.validaPreco(price)
-            && this.validaItens(item1, item2, it
+            && this.validaItens(item1, item2, item3)
+    }
+}
