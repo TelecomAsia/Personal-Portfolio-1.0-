@@ -38,4 +38,28 @@ export default class ValidacoesFilmes{
      /**
      * 
      * @param {string} diretor 
-  
+     * @returns boolean
+     */
+    static validaDiretor(diretor){
+        return diretor.length >= 1
+    }
+
+     /**
+     * 
+     * @param {string} sinopse 
+     * @returns boolean
+     */
+    static validaSinopse(sinopse){
+        return sinopse.length >= 1
+    }
+
+    /**
+     * 
+     * @param {string} nome 
+     * @param {string} genero 
+     * @param {string} duracao 
+     * @param {string} anoLancamento 
+     * @param {string} diretor 
+     * @param {string} sinopse 
+     * @param {string} image
+     * @returns boolean
