@@ -63,3 +63,8 @@ export default class ValidacoesFilmes{
      * @param {string} sinopse 
      * @param {string} image
      * @returns boolean
+     */
+    static isValid(nome, genero, duracao, anoLancamento, diretor, sinopse, image){
+    return this.validaNome(nome)  && this.validaGenero(genero) && this.validaDuracao(duracao) && this.validaAnoLancamento(anoLancamento) && this.validaDiretor(diretor) && this.validaSinopse(sinopse)
+}
+}
